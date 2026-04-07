@@ -75,6 +75,7 @@ FROM Subscriptions s
 JOIN Users u ON s.user_id = u.user_id
 WHERE s.subs_end > CURRENT_DATE AND s.auto_renewal = true;
 
+
 ##Структура репозитория
 
 online-cinema-database/
