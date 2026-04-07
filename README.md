@@ -41,24 +41,6 @@
 
 - update_last_viewed() - обновляет поле last_viewed в профиле при просмотре
 
-##Структура репозитория
-
-online-cinema-database/
-├── README.md
-├── schema/
-│   ├── 01_tables.sql
-│   ├── 02_constraints.sql
-│   ├── 03_triggers.sql
-│   └── 04_views.sql
-├── data/
-│   └── seed_data.sql
-├── queries/
-│   ├── top_movies.sql
-│   ├── user_history.sql
-│   └── active_subscriptions.sql
-└── docs/
-    └── ER_diagram.png
-
 ## Быстрый старт
 
 Создание базы данных:
@@ -92,3 +74,21 @@ SELECT u.username, s.subs_type, s.subs_end
 FROM Subscriptions s
 JOIN Users u ON s.user_id = u.user_id
 WHERE s.subs_end > CURRENT_DATE AND s.auto_renewal = true;
+
+##Структура репозитория
+
+online-cinema-database/
+├── README.md
+├── schema/
+│   ├── 01_tables.sql
+│   ├── 02_constraints.sql
+│   ├── 03_triggers.sql
+│   └── 04_views.sql
+├── data/
+│   └── seed_data.sql
+├── queries/
+│   ├── top_movies.sql
+│   ├── user_history.sql
+│   └── active_subscriptions.sql
+└── docs/
+    └── ER_diagram.png
